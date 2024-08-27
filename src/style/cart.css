@@ -1,0 +1,143 @@
+.cartContainer{
+    box-sizing: border-box;
+    position: absolute;
+    height: 100vh;
+    width: 600px;
+    right: -600px;
+    z-index: 10;
+    background-color: #242424;
+    transition: .2s;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+.cartTitle{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #111111;
+    font-weight: 900;
+    font-size: 4rem;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 80px; 
+}
+
+.closeCart{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    width: 100px;
+    background-color: transparent;
+    padding: 10px;
+    height: 100px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closeCart div{
+    background-image: url('../images/arrow.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 90px;
+    height: 90px;
+    transition: .5s;
+}
+
+.cartItems{
+    height: 75%;
+    padding: 10px;
+    background-color: #111111;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    gap: 15px;
+    font-size: 2rem;
+    vertical-align: middle;
+    font-weight: bold;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.cartItem{
+    width: 95%;
+    background-color: #242424;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+.cartImg{
+    max-width: 100px;
+    max-height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    background-color: white;
+    border-radius: 10px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.cartPriceName{
+    height: 100px;
+    font-size: 1rem;
+    max-width: 230px;
+}
+
+.cartPrice{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.count{
+    margin-left: auto;
+    margin-top: auto;
+    display: flex;
+    background-color: #111111;
+    width: 120px;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subtractBtn, .addBtn{
+    font-size: 1.5rem;
+    max-width: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    max-height: 40px;
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    background-color: #242424;
+    border-radius: 10px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px; 
+    cursor: pointer;
+}
+
+.total{
+    font-size: 3rem;
+    font-weight: 900;
+    background-color: #111111;
+    height: 90px;
+    vertical-align: middle;
+    line-height: 90px; 
+    padding-left: 10px;
+    border-radius: 10px;
+}

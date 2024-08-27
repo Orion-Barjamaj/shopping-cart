@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #F2F4F3;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background-color: #0A0908;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.animation{
+    animation: fadeIn .5s ease-in-out 0s 1;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      100%{
+        opacity: 100%;
+        transform: translateY(0px);
+      }
+}
+
+@media only screen and (max-width: 1200px) { /* Tablet */
+    .menu{
+        display: none;
+    }
+
+    .threeLines{
+        display: flex;
+    }
+
+    .navBarContent{
+        justify-content: space-evenly;
+    }
+
+    .mobileMenu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 50px;
+    }
+}

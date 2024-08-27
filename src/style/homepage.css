@@ -1,0 +1,69 @@
+.homePageContent{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.secondSlogan{
+    margin-top: 60px;
+    position: absolute;
+    top: 30px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.border{
+    border: 2px solid #00A9A5;
+    padding: 5px;
+    display: inline-block;
+    position: relative;
+}
+
+.border::before{
+    content: "";
+    width: 14px;
+    height: 14px;
+    border: 2px solid #00A9A5;
+    background-color: white;
+    position: absolute; 
+    top: -7px; 
+    left: -7px; 
+}
+
+.border::after{
+    content: "";
+    width: 14px;
+    height: 14px;
+    border: 2px solid #00A9A5;
+    background-color: white;
+    position: absolute; 
+    bottom: -7px; 
+    right: -7px; 
+}
+
+.manImg{
+    z-index: 2;
+    position: absolute;
+    top:100vh;
+    transform:translateY(-100%);
+    background-image: url('../images/man.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 700px;
+}
+
+.backgroundText{
+    position: absolute;
+    top: 90vh;
+    transform:translateY(-100%);
+    font-weight: 900;
+    font-size: 25vw;
+    opacity: .3;
+}

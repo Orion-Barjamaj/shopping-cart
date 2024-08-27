@@ -1,0 +1,161 @@
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 120px;
+    flex-direction: column;
+}
+
+.navBarContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+.whiteBg{
+    position: absolute;
+    height: 65px;
+    left: 150px;
+    width: 150px;
+    background-color: #F2F4F3;
+    border-radius: 50px;
+    transition: .2s;
+}
+
+.menu{
+    position: relative;
+    background-color: #242424;
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: 75px;
+    border-radius: 50px;
+    justify-content: space-around;
+    font-size: 2rem;
+}
+
+.menuItem{
+    transition: .2s;
+    cursor: pointer;
+    z-index: 2;
+    color: #F2F4F3;
+}
+
+.logo{
+    font-size: 3rem;
+    font-weight: 900;
+    width: 200px;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.cartBtn, .searchBtn{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.cartBtn{
+    background-image: url('../images/cart.png');
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.cartCount{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #0A0908;
+    font-size: 1rem;
+    content: "0";
+    width: 22px;
+    height: 22px;
+    background-color: white;
+    border-radius: 40px;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+    line-height: 22px; 
+}
+
+.searchBtn{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 25px;
+    transform: translate(-50%, -50%);
+    background-image: url('../images/search.png');
+}
+
+.line{
+    height: 2px;
+    background-color: #F2F4F3;
+    width: 90%;
+    opacity: .5;
+}
+
+.searchHandle{
+    display: flex;
+    position: relative;
+}
+
+.searchInput{
+    width: 300px;
+    height: 45px;
+    padding-left: 60px;
+    font-size: 1.5rem;
+    background-color: #242424;
+    border: none;
+    border-radius: 50px;
+}
+
+.threeLines{
+    display: none;
+    width: 35px;
+    height: 35px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.line1, .line2, .line3{
+    width: 100%;
+    height: 2px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.line2{
+    width: 85%;
+}
+
+.mobileMenu{
+    display: none;
+    position: absolute;
+    left: -450px;
+    width: 450px;
+    background-color: #242424;
+    height: 100%;
+    z-index: 10;
+    transition: .3s;
+    gap: 20px;
+}
+
+.mobileMenu div{
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+}
