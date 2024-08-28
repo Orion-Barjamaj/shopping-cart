@@ -48,6 +48,12 @@
     font-size: 3rem;
     font-weight: 900;
     width: 200px;
+    cursor: pointer;
+}
+
+.logoContainer{
+    display: flex;
+    align-items: center;
 }
 
 .search{

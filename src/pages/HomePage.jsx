@@ -67,8 +67,15 @@ function Cart({show, setShow, cart, setCart}) {
 function NavBar({setPage, page, cart, setCart, search, setSearch}){
     const [width, setWidth] = useState(150);
     const [pos, setPos] = useState(5);
-    const [mobilePos, setMobilePos] = useState(0);
+    const [mobilePos, setMobilePos] = useState(-450);
     const [showCart, setShowCart] = useState(false);
+    const [windowWidth, setwindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+      const handleResize = () => setwindowWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     let convertToLowerCase = (e) => {
         let lowerCase = e.target.value.toLowerCase();
@@ -79,12 +86,14 @@ function NavBar({setPage, page, cart, setCart, search, setSearch}){
         <>
             <div className="navBar">
                 <div className="navBarContent">
-                    <div className="threeLines" onClick={() => setMobilePos(0)}>
-                        <div className="line1"></div>
-                        <div className="line2"></div>
-                        <div className="line3"></div>
+                    <div className="logoContainer">
+                        <div className="threeLines" onClick={() => setMobilePos(0)}>
+                            <div className="line1"></div>
+                            <div className="line2"></div>
+                            <div className="line3"></div>
+                        </div>
+                        <div className="logo" onClick={() => {setPage('Home'); setPos(5); setWidth(150)}}>SNAZZY</div>
                     </div>
-                    <div className="logo">SNAZZY</div>
                     <div className="menu">
                         <div className="whiteBg" style={{width: width+'px', left: pos+'px'}}></div>
                         <div className="menuItem" style={page === 'Home' ? {color: '#0A0908'} : {color: '#F2F4F3'}} onClick={() => {setPage('Home'); setPos(5); setWidth(150)}}>HOME</div>

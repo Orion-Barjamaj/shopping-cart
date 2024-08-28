@@ -46,4 +46,76 @@ body{
         justify-content: flex-start;
         padding-top: 50px;
     }
+
+    .logoContainer{
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) { /* Phone */ 
+    .secondSlogan{
+        font-size: 3rem;
+    }
+
+    .manImg{
+        width: 450px;
+        height: 550px;
+    }
+
+    .backgroundText{
+        top: 80vh;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .navBarContent{
+        flex-direction: column;
+    }
+
+    .searchInput{
+        width: 200px;
+    }
+
+    .logoContainer{
+        gap: 50px;
+    }
+
+    .navBar{
+        gap: 10px;
+        height: 150px;
+    }
+
+    .cartContainer{
+        width: 250px;
+        right: -250px;
+    }
+
+    .cartTitle{
+        font-size: 2rem;
+    }
+
+    .total{
+        font-size: 1.5rem;
+    }
+
+    .cartItem{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .count{
+        width: 170px;
+        gap: 5px;
+    }
+
+    .cartImg{
+        max-width: 95%;
+        min-width: 95%;
+    }
+
+    .mobileMenu{
+        width: 250px;
+    }
 }
