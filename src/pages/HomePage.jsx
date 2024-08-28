@@ -55,7 +55,7 @@ function Cart({show, setShow, cart, setCart}) {
     );
 
     return (
-        <div className="cartContainer" style={show ? {right: '0'} : {right: '-600px'}}>
+        <div className="cartContainer" style={show ? {right: '0'} : {right: '-600px', display: 'none'}}>
             <div className="cartTitle">YOUR CART</div>
             <div className="cartItems">{cart.length === 0 ? 'Nothing to show here' : clotheItem}</div>
             <button className="closeCart" onClick={() => setShow(false)}><div style={show === false ? {transform: 'rotate(0deg)', left: '5%'} : {transform: 'rotate(180deg)', left: '0%'}}></div></button>
@@ -69,13 +69,6 @@ function NavBar({setPage, page, cart, setCart, search, setSearch}){
     const [pos, setPos] = useState(5);
     const [mobilePos, setMobilePos] = useState(-450);
     const [showCart, setShowCart] = useState(false);
-    const [windowWidth, setwindowWidth] = useState(window.innerWidth);
-
-    useEffect(() => {
-      const handleResize = () => setwindowWidth(window.innerWidth);
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
 
     let convertToLowerCase = (e) => {
         let lowerCase = e.target.value.toLowerCase();
