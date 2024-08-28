@@ -119,4 +119,9 @@ body{
     .mobileMenu{
         width: 250px;
     }
+
+    .cartItems{
+        overflow-x: hidden;
+        height: 60%;
+    }
 }
