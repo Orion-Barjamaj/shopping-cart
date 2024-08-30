@@ -4,6 +4,7 @@ import '../style/navbar.css';
 import '../style/cart.css';
 import { v4 as uuidv4 } from 'uuid';
 import Shop from './Shop.jsx';
+import { Link, Outlet } from "react-router-dom";
 
 function Cart({show, setShow, cart, setCart}) {
     const [total, setTotal] = useState(0);
@@ -89,15 +90,17 @@ function NavBar({setPage, page, cart, setCart, search, setSearch}){
                     </div>
                     <div className="menu">
                         <div className="whiteBg" style={{width: width+'px', left: pos+'px'}}></div>
-                        <div className="menuItem" style={page === 'Home' ? {color: '#0A0908'} : {color: '#F2F4F3'}} onClick={() => {setPage('Home'); setPos(5); setWidth(150)}}>HOME</div>
-                        <div className="menuItem" style={page === 'Shop' ? {color: '#0A0908'} : {color: '#F2F4F3'}} onClick={() => {setPage('Shop'); setPos(150); setWidth(140)}}>SHOP</div>
+                        <div className="menuItem" style={page === 'Home' ? {color: '#0A0908'} : {color: '#F2F4F3'}} onClick={() => {setPage('Home'); setPos(5); setWidth(150)}}><Link to='/' style={page === 'Home' ? {color: '#0A0908'} : {color: '#F2F4F3'}}>HOME</Link></div>
+                        <div className="menuItem" style={page === 'Shop' ? {color: '#0A0908'} : {color: '#F2F4F3'}} onClick={() => {setPage('Shop'); setPos(150); setWidth(140)}}><Link to='Shop' style={page === 'Shop' ? {color: '#0A0908'} : {color: '#F2F4F3'}}>SHOP</Link></div>
                         <div className="menuItem" style={page === 'About Us' ? {color: '#0A0908'} : {color: '#F2F4F3'}} onClick={() => {setPage('About Us'); setPos(295); setWidth(200)}}>ABOUT US</div>
                     </div>
                     <div className="search">
-                        <div className="searchHandle">
-                            <input type="text" className="searchInput" id='searchInput' name='searchInput' onChange={convertToLowerCase} onClick={() => {setPage('Shop'); setPos(150); setWidth(140)}}></input>
-                            <label className="searchBtn" htmlFor='searchInput' onClick={() => setPage('Shop')}></label>
-                        </div>
+                        <Link to='Shop'>
+                            <div className="searchHandle">
+                                <input type="text" className="searchInput" id='searchInput' name='searchInput' onChange={convertToLowerCase} onClick={() => {setPage('Shop'); setPos(150); setWidth(140)}}></input>
+                                <label className="searchBtn" htmlFor='searchInput' onClick={() => setPage('Shop')}></label>
+                            </div>
+                        </Link>
                         <div className="cartBtn" onClick={() => {setShowCart(true)}}><div className="cartCount">{cart.length}</div></div>
                     </div>
                 </div>
@@ -105,8 +108,8 @@ function NavBar({setPage, page, cart, setCart, search, setSearch}){
             </div>
             <Cart show={showCart} setShow={setShowCart} cart={cart} setCart={setCart}/>
             <div className="mobileMenu" style={{left: `${mobilePos}px`}}>
-                <div className="mobileMenuItem" onClick={() => {setPage('Home'); setMobilePos(-450)}}>HOME</div>
-                <div className="mobileMenuItem" onClick={() => {setPage('Shop'); setMobilePos(-450)}}>SHOP</div>
+                <div className="mobileMenuItem" onClick={() => {setPage('Home'); setMobilePos(-450)}}><Link to="/">HOME</Link></div>
+                <div className="mobileMenuItem" onClick={() => {setPage('Shop'); setMobilePos(-450)}}><Link to='Shop'>SHOP</Link></div>
                 <div className="mobileMenuItem" onClick={() => {setPage('About Us'); setMobilePos(-450)}}>ABOUT US</div>
             </div>
         </>
